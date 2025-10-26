@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Womenhood - Your Voice Matters</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Womenhood</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <button id="darkToggle">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 🌸 Light photo-based Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-overlay">
+    <div class="hero-text">
+      <h2>“I want every girl to know that her voice can change the world.”</h2>
+      <p>Empowering women with safety tools, self-defense guides, and 24×7 emergency support.</p>
+      <section id="myContacts" class="my-contacts container">
+  <h2>My Emergency Contacts</h2>
+  <p>Add your family or friends’ numbers here for quick access in an emergency.</p>
+
+  <form id="contactListForm">
+    <input type="text" id="contactName" placeholder="Contact Name" required />
+    <input type="tel" id="contactNumber" placeholder="Phone Number" required />
+    <button type="submit" class="btn-red">Add Contact</button>
+  </form>
+
+  <div id="savedContacts" class="contacts-grid"></div>
+</section>
+
+    </div>
+  </div>
+</section>
+<section id="about" class="about container">
+  <h2>About Us</h2>
+  <p>
+    This platform is created to provide protection and safety for women. 
+    Women can use it to make emergency calls, share their location, learn self-defense tips, 
+    and access support services easily. Our goal is to empower women to stay safe and feel secure in any situation.
+  </p>
+</section>
+
+
+  <section id="services" class="services container">
+  <h2>Our Services</h2>
+  <div class="service-grid">
+   <!-- Emergency Alert -->
+<!-- Emergency Alert -->
+<a href="emergency.html" class="card">
+  <h3>🚨 Emergency Alert</h3>
+  <p>Quickly connect to police and emergency numbers with one click.</p>
+</a>
+
+ 
+
+  
+
+
+
+    <a href="https://www.youtube.com/results?search_query=self+defense+tips+for+women" 
+       target="_blank" class="card link-card">
+      <h3>🥋 Self Defense Tips</h3>
+      <p>Learn easy, practical self-defense moves through our resources.</p>
+    </a>
+
+    <a href="https://www.google.com/maps/search/women+support+center+near+me/" 
+       target="_blank" class="card link-card">
+      <h3>🏠 Local Support</h3>
+      <p>Find nearby shelters, NGOs, and counsellors instantly.</p>
+    </a>
+
+    <a href="https://www.amazon.in/s?k=women+safety+products" 
+       target="_blank" class="card link-card">
+      <h3>🛍️ Safety Products</h3>
+      <p>Explore our curated list of safety tools like alarms and sprays.</p>
+    </a>
+  </div>
+</section>
+
+  <section id="contact" class="contact container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+      <p id="formStatus"></p>
+    </form>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Women Safety | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Emergency Modal -->
+  <div id="helplineModal" class="modal">
+    <div class="modal-content">
+      <h3>Emergency Helplines</h3>
+      <ul>
+        <li><a href="tel:112">🚨 Emergency: 112</a></li>
+        <li><a href="tel:100">👮 Police: 100</a></li>
+        <li><a href="tel:102">🚑 Ambulance: 102</a></li>
+        <li><a href="tel:1091">👩‍🦰 Women Helpline: 1091</a></li>
+        <li><a href="tel:181">🏠 Domestic Abuse: 181</a></li>
+      </ul>
+      <button id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <!-- Floating Buttons -->
+  <div class="floating-btns">
+    <a href="tel:112" class="float-btn red">Call 112</a>
+    <button id="shareLocation" class="float-btn dark">Share Location</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
