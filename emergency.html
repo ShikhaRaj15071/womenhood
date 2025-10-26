@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Contacts - Women Safety</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { text-align: center; padding: 50px 20px; background: #fff5fb; color: #333; }
+    h1 { color: #e60073; margin-bottom: 10px; }
+    p { margin-bottom: 20px; }
+    .number-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      margin: 15px auto;
+      padding: 20px;
+      max-width: 400px;
+      transition: transform 0.2s;
+    }
+    .number-card:hover { transform: scale(1.03); }
+    .number-card a {
+      display: inline-block;
+      background: #e60073;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .number-card a:hover { background: #c50063; }
+    footer { margin-top: 40px; color: #555; }
+
+    /* Share Location button */
+    .share-btn {
+      display: inline-block;
+      margin-top: 30px;
+      background: linear-gradient(135deg, #7f00ff, #e60073);
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .share-btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Emergency Contacts</h1>
+  <p>Click any number below to call directly from your device.</p>
+
+  <div class="number-card">
+    <h2>🚨 Emergency Helpline</h2>
+    <p>National emergency service number.</p>
+    <a href="tel:112">Call 112</a>
+  </div>
+
+  <div class="number-card">
+    <h2>👮 Police</h2>
+    <p>For immediate police assistance.</p>
+    <a href="tel:100">Call 100</a>
+  </div>
+
+  <div class="number-card">
+    <h2>🚑 Ambulance</h2>
+    <p>For medical emergencies and accidents.</p>
+    <a href="tel:102">Call 102</a>
+  </div>
+
+  <div class="number-card">
+    <h2>👩‍🦰 Women Helpline</h2>
+    <p>For women safety & harassment support.</p>
+    <a href="tel:1091">Call 1091</a>
+  </div>
+
+  <div class="number-card">
+    <h2>🏠 Domestic Abuse Helpline</h2>
+    <p>24×7 support for domestic violence victims.</p>
+    <a href="tel:181">Call 181</a>
+  </div>
+
+  <div class="number-card">
+    <h2>💻 Cyber Crime Helpline</h2>
+    <p>Report online abuse or cyber harassment.</p>
+    <a href="tel:155620">Call 155620</a>
+  </div>
+
+  <!-- 📍 Share Location Button -->
+  <button class="share-btn" id="shareLocationBtn">📍 Share My Location</button>
+
+  <footer>
+    <p>© 2025 Women Safety | Stay Strong. Stay Safe.</p>
+    <a href="index.html" style="color:#e60073; text-decoration:none;">⬅ Back to Home</a>
+  </footer>
+
+  <script>
+    // Share location function
+    document.getElementById("shareLocationBtn").addEventListener("click", () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            const lat = pos.coords.latitude;
+            const lon = pos.coords.longitude;
+            const url = `https://maps.google.com/?q=${lat},${lon}`;
+            window.open(url, "_blank");
+          },
+          (err) => {
+            alert("⚠️ Unable to access location. Please allow location permission.");
+          }
+        );
+      } else {
+        alert("❌ Geolocation not supported by your browser.");
+      }
+    });
+  </script>
+</body>
+</html>
